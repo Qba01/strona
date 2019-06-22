@@ -33,7 +33,7 @@
        <input type="text" id="username" name="username">
        <label for="password">Hasło:</label>
        <input type="password" id="password" name="password">
-       <div id="lower">
+       <div id="lower2">
        <input type="submit" value="Zarejestruj">
        </div>
        </form>

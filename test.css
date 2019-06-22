@@ -103,10 +103,7 @@ body {
 
 /*logowanie*/
 
-.center {width: 900px;
-  margin: 0 auto;
-  margin-top: 150px;
-}
+.center {width: 900px; margin: 0 auto; margin-top: 150px;}
 
 .logowanie{
   background-color: #C5C6C7;
@@ -115,8 +112,11 @@ body {
   margin-top: 20px;
 }
 
+
+
 #panel {
-	width: 400px;
+
+  width: 400px;
 	margin: 0 auto;
 	padding: 0;
 	background: #fff;
@@ -129,10 +129,11 @@ body {
     box-shadow: 0 0 2px silver;
 }
 
+
 form {margin: 0;}
 label {
 	display: block;
-	width: 260px;
+	width: 300px;
 	padding: 10px 20px;
 	color: #696969;
 	font-size: 16px;
@@ -151,10 +152,10 @@ label {
 	outline: 5px solid #e5f2f8;
 }
 #lower {
-background: #ecf2f5;
-width: 360px;
-padding: 5px 20px;
-margin-top: 20px;
+	background: #ecf2f5;
+	width: 398px;
+	padding: 15px 20px;
+	margin-top: 150px;
 }
 .check {
 	display: inline;
@@ -162,16 +163,20 @@ margin-top: 20px;
 	font-size: 11px;
 	padding: 5px;
 }
-input[type="submit"] {
-	width: 70px;
+
+#panel input[type="submit"] {
+	width: 150px;
 	padding: 5px 13px;
 	border: 1px solid #005f85;
 	color: white;
 	text-shadow: 0 0 1px black;
 	background: #98c9dc;
 	position: relative;
-	left: 180px;
+	left: 120px;
 }
+
+
+
 
 /*Rejestracja */
 
@@ -182,7 +187,9 @@ input[type="submit"] {
   margin-top: 20px;
 }
 
+
 #panel_2 {
+
 	width: 420px;
 	margin: 0 auto;
 	padding: 0;
@@ -195,6 +202,7 @@ input[type="submit"] {
     -moz-box-shadow: 0 0 2px silver;
     box-shadow: 0 0 2px silver;
 }
+
 
 form {margin: 0;}
 label {
@@ -217,12 +225,12 @@ label {
 #username:focus, #password:focus, #imie:focus, #nazwisko:focus, #email:focus {
 	outline: 5px solid #e5f2f8;
 }
-/* #lower2 {
+#lower2 {
 	background: #ecf2f5;
 	width: 418px;
 	padding: 15px 20px;
 	margin-top: 20px;
-} */
+}
 .check {
 	display: inline;
 	float: none;
