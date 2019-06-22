@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #0B0C10;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #45A29E;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #212121;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #66FCF1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #273240;
+  color: #66FCF1;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #0B0C10;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: #C5C6C7;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #BDBDBD;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/*logowanie*/
+
+.center {width: 900px; margin: 0 auto; margin-top: 150px;}
+
+.logowanie{
+  background-color: #C5C6C7;
+  height: 650px;
+  padding: 150px;
+  margin-top: 20px;
+}
+
+
+
+#panel {
+
+	width: 400px;
+	margin: 0 auto;
+	padding: 0;
+	background: #fff;
+	border: 1px solid silver;
+	font: 16px calibri;
+	letter-spacing: -1px;
+	padding: 15px 0 0;
+	-webkit-box-shadow: 0 0 2px silver;
+    -moz-box-shadow: 0 0 2px silver;
+    box-shadow: 0 0 2px silver;
+}
+
+
+form {margin: 0;}
+label {
+	display: block;
+	width: 260px;
+	padding: 10px 20px;
+	color: #696969;
+	font-size: 16px;
+	text-shadow: 0 0 1px silver;
+}
+#username, #password {
+	font-size: 22px;
+	display: block;
+	width: 360px;
+	margin: 0 auto;
+	padding: 10px 5px;
+	border: 1px solid silver;
+	outline: 5px solid #ebebeb;
+}
+#username:focus, #password:focus {
+	outline: 5px solid #e5f2f8;
+}
+#lower {
+	background: #ecf2f5;
+	width: 290px;
+	padding: 15px 20px;
+	margin-top: 300px;
+}
+.check {
+	display: inline;
+	float: none;
+	font-size: 11px;
+	padding: 5px;
+}
+input[type="submit"] {
+	width: 70px;
+	padding: 5px 13px;
+	border: 1px solid #005f85;
+	color: white;
+	text-shadow: 0 0 1px black;
+	background: #98c9dc;
+	position: relative;
+	left: 180px;
+}
+
+/*Rejestracja */
+
+.rejestracja{
+  background-color: #C5C6C7;
+  height: 650px;
+  padding: 60px;
+  margin-top: 20px;
+}
+
+
+#panel_2 {
+
+	width: 420px;
+	margin: 0 auto;
+	padding: 0;
+	background: #fff;
+	border: 1px solid silver;
+	font: 16px calibri;
+	letter-spacing: -1px;
+	padding: 15px 0 0;
+	-webkit-box-shadow: 0 0 2px silver;
+    -moz-box-shadow: 0 0 2px silver;
+    box-shadow: 0 0 2px silver;
+}
+
+
+form {margin: 0;}
+label {
+	display: block;
+	width: 260px;
+	padding: 10px 20px;
+	color: #696969;
+	font-size: 16px;
+	text-shadow: 0 0 1px silver;
+}
+#username, #password, #imie, #nazwisko, #email {
+	font-size: 22px;
+	display: block;
+	width: 360px;
+	margin: 0 auto;
+	padding: 10px 5px;
+	border: 1px solid silver;
+	outline: 5px solid #ebebeb;
+}
+#username:focus, #password:focus, #imie:focus, #nazwisko:focus, #email:focus {
+	outline: 5px solid #e5f2f8;
+}
+#lower {
+	background: #ecf2f5;
+	width: 418px;
+	padding: 15px 20px;
+	margin-top: 20px;
+}
+.check {
+	display: inline;
+	float: none;
+	font-size: 11px;
+	padding: 5px;
+}
+input[type="submit"] {
+	width: 120px;
+	padding: 5px 13px;
+	border: 1px solid #005f85;
+	color: white;
+	text-shadow: 0 0 1px black;
+	background: #98c9dc;
+	position: relative;
+	left: 250px;
+}
