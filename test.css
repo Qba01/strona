@@ -103,7 +103,10 @@ body {
 
 /*logowanie*/
 
-.center {width: 900px; margin: 0 auto; margin-top: 150px;}
+.center {width: 900px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
 
 .logowanie{
   background-color: #C5C6C7;
@@ -112,10 +115,7 @@ body {
   margin-top: 20px;
 }
 
-
-
 #panel {
-
 	width: 400px;
 	margin: 0 auto;
 	padding: 0;
@@ -128,7 +128,6 @@ body {
     -moz-box-shadow: 0 0 2px silver;
     box-shadow: 0 0 2px silver;
 }
-
 
 form {margin: 0;}
 label {
@@ -152,10 +151,10 @@ label {
 	outline: 5px solid #e5f2f8;
 }
 #lower {
-	background: #ecf2f5;
-	width: 290px;
-	padding: 15px 20px;
-	margin-top: 300px;
+background: #ecf2f5;
+width: 360px;
+padding: 5px 20px;
+margin-top: 20px;
 }
 .check {
 	display: inline;
@@ -183,9 +182,7 @@ input[type="submit"] {
   margin-top: 20px;
 }
 
-
 #panel_2 {
-
 	width: 420px;
 	margin: 0 auto;
 	padding: 0;
@@ -198,7 +195,6 @@ input[type="submit"] {
     -moz-box-shadow: 0 0 2px silver;
     box-shadow: 0 0 2px silver;
 }
-
 
 form {margin: 0;}
 label {
@@ -221,12 +217,12 @@ label {
 #username:focus, #password:focus, #imie:focus, #nazwisko:focus, #email:focus {
 	outline: 5px solid #e5f2f8;
 }
-#lower {
+/* #lower2 {
 	background: #ecf2f5;
 	width: 418px;
 	padding: 15px 20px;
 	margin-top: 20px;
-}
+} */
 .check {
 	display: inline;
 	float: none;
