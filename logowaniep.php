@@ -1,24 +1,24 @@
 <?php
 session_start();
-
-    if ( ! empty( $_POST ) ) {
-        if ( isset( $_POST['login'] ) && isset( $_POST['pass'] ) ) {
-            // Getting submitted user data from database
-            $connect= new mysqli('localhost','root','','projekt');
-            $login =$connect->real_escape_string(htmlentities($_POST['login']));
-            $pass =$connect->real_escape_string(htmlentities($_POST['pass']));
-            $stmt = $connect->prepare("SELECT * FROM 'users' WHERE login ='$login'");
-            $stmt->bind_param('s', $_POST['login']);
-            $stmt->execute();
-            $result = $stmt->get_result();
-        	$user = $result->fetch_object();
-
-        	// Verify user password and set $_SESSION
-        	if ( password_verify( $_POST['pass'], $user->password ) ) {
-        		$_SESSION['user_id'] = $user->ID;
-        	}
-        }
+if (!empty($_POST['username']) && !empty($_POST['password'])){
+  require_once('./connect.php');
+  if($connect){
+    $login = $connect->real_escape_string(htmlentities($_POST['username']));
+    $pass = $connect->real_escape_string(htmlentities($_POST['password']));
+    $sql = "SELECT * FROM `users` WHERE login='$login' and password='$pass'";
+    if ($result = $connect->query($sql)){
+      if ($result->num_rows==1){
+        $connect->close();
+        $_SESSION['zalogowany']['username'];
+        header('location: ./zalogowany.php');
+      }else {
+        $_SESSION['error']='Błędny login lub hasło';
+        header('location: ./logowanie.php');
+      }
     }
-
-
+  }
+}else {
+  header('location: ./logowanie.php');
+  $_SESSION['error'] = 'Wypelnij wszystkie pola';
+}
 ?>

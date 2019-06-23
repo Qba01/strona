@@ -16,7 +16,7 @@ session_start();
        </div>
 
        <div class="topnav">
-         <a href="#">Główna</a>
+         <a href="./index.html">Główna</a>
          <a href="#">Najpopularniejsze</a>
          <a href="#">Link</a>
          <a href="logowanie.php" style="float:right">Zaloguj</a>
@@ -25,7 +25,13 @@ session_start();
 
        <div class ="rejestracja">
          <div id="panel_2">
-           <form>
+           <?php
+           if (isset($_SESSION['error'])) {
+             echo '<span class="red">', $_SESSION['error'], '</span>';
+             unset($_SESSION['error']);
+           }
+            ?>
+           <form action="rejcheck.php" method="post">
              <label for="imie">Imię:</label>
              <input type="text" id="imie" name="imie">
              <label for="nazwisko">Nazwisko:</label>
@@ -40,12 +46,7 @@ session_start();
                <input type="submit" value="Zarejestruj">
                </div>
            </form>
-           <?php
-           if (isset($_SESSION['error'])) {
-             echo '<span class="red">', $_SESSION['error'], '</span>';
-             unset($_SESSION['error']);
-           }
-            ?>
+
          </div>
       </div>
      </body>

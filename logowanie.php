@@ -7,7 +7,7 @@ session_start();
      <meta charset="UTF-8" />
       <link rel="stylesheet" href="test.css" type ="text/css"/>
       <title>Logowanie</title>
-     </head>
+     </headp
      <body>
 
        <div class="header">
@@ -16,10 +16,10 @@ session_start();
        </div>
 
        <div class="topnav">
-         <a href="#">Główna</a>
+         <a href="./index.html">Główna</a>
          <a href="#">Najpopularniejsze</a>
          <a href="#">Link</a>
-         <a href="#" style="float:right">Zarejestruj</a>
+         <a href="rejestracja.php" style="float:right">Zarejestruj</a>
          <a href="logowanie.php" style="float:right">Zaloguj</a>
        </div>
        <div class ="logowanie">
@@ -37,7 +37,7 @@ session_start();
            <input type="password" id="password" name="password" placeholder="Hasło">
              <div id="lower">
                <input type="checkbox">
-               <label class="check" for="checkbox">Zapamiętaj mnie!</label>
+               <label class="check" for="checkbox">Zapamiętaj mnie</label>
                <input type="submit" name="submit" value="Login">
              </div>
          </form>
