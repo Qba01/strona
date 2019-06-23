@@ -3,6 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="test.css" type ="text/css"/>
+      <script>
+        expireDate = new Date
+        expireDate.setMonth(expireDate.getMonth()+6)
+        jcount = eval(cookieVal("jaafarCounter"))
+        jcount++
+        document.cookie = "jaafarCounter="+jcount+";expires=" + expireDate.toGMTString()
+        function cookieVal(cookieName) {
+          thisCookie = document.cookie.split("; ")
+          for (i=0; i<thisCookie.length; i++){
+            if (cookieName == thisCookie[i].split("=")[0]){
+              return thisCookie[i].split("=")[1]
+            }
+          }
+            return 0
+        }
+        function page_counter(){
+          for (i=0;i<(7-jcount.toString().length);i++)
+            document.write('<span class="counter">0</span>')
+          for (y=0;y<(jcount.toString().length);y++)
+            document.write('<span class="counter">'+jcount.toString().charAt(y)+'</span>')
+        }
+      </script>
   </head>
   <body>
   <div class="header">
@@ -37,26 +59,30 @@
     </div>
     <div class="rightcolumn">
       <div class="card">
-        <h2>About Me</h2>
-        <div class="fakeimg" style="height:100px;">Image</div>
-        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        <h3>Licznik odwiedzin</h3>
+        <script>page_counter(jcount);</script>
       </div>
+
       <div class="card">
         <h3>Popular Post</h3>
         <div class="fakeimg"><p>Image</p></div>
         <div class="fakeimg"><p>Image</p></div>
         <div class="fakeimg"><p>Image</p></div>
+        <div class="fakeimg"><p>Image</p></div>
       </div>
       <div class="card">
-        <h3>Follow Me</h3>
-        <p>Some text..</p>
+        <h2>About Me</h2>
+        <div class="fakeimg" style="height:100px;">Image</div>
+        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
       </div>
+
     </div>
   </div>
 
   <div class="footer">
     <h2>Footer</h2>
   </div>
+
 
   </body>
 </html>
