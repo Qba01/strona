@@ -1,5 +1,7 @@
 <?php
+session_start();
 session_destroy();
+session_unset();
 ?>
 <!doctype html>
 <html lang="pl" dir="ltr">

@@ -1,5 +1,14 @@
 <?php
 session_start();
+$idletime = 300; //5min
+if(time() - $_SESSION[timestamp]>$idletime){
+  session_destroy();
+  session_unset();
+  header('location: ./logowanie.php');
+  echo "<script>alert('Wylogowano przez brak aktywnosci');</script>";
+}else{
+  $_SESSION['timestamp']=time();
+}
 ?>
 <!doctype html>
 <html lang="pl" dir="ltr">
@@ -21,9 +30,8 @@ session_start();
          <a href="#">Link</a>
          <a href="wyloguj.php" style="float:right">Wyloguj</a>
        </div>
-
        <div class ="zalogowany">
-
+         <p>Twoje dane mogły by tu być, ale są na serwerze</p> <br><br>
       </div>
      </body>
 </html>

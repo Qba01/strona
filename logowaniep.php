@@ -10,6 +10,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])){
       if ($result->num_rows==1){
         $connect->close();
         $_SESSION['zalogowany']['username'];
+        $_SESSION['timestamp']=time();
         header('location: ./zalogowany.php');
       }else {
         $_SESSION['error']='Błędny login lub hasło';
